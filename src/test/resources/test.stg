@@ -1,0 +1,33 @@
+content(quote, date) ::= <<
+
+INSERT
+INTO quote_value
+  (
+    quote_set_name,
+    quote_name,
+    quote_date,
+    entered_datetime,
+    estimated_b,
+    entered_user,
+    bid,
+    ask,
+    quote_type
+  )
+  VALUES
+  (
+    'CAL_CLOSE',
+    '$quote$',
+    to_timestamp('$date$', 'YYYY-MM-DD'),
+    to_timestamp('$date$ 14:08:40', 'YYYY-MM-DD HH24:MI:SS'),
+    0,
+    'calypso_user',
+    0.0,
+    0.0,
+    'CleanPrice'
+  );
+
+>>
+
+filename(quote, date) ::= <<
+output$quote$-$date$.txt
+>>
