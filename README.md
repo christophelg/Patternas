@@ -36,28 +36,29 @@ NB: The data for the examples is in the source tree.
 
 ## Cartesian output
 
+	java -jar patternas-1.0.jar 
+		--templateFilename test.stg
+		--domain date=dates.txt 
+		--domain quote=quotes.txt 
+		--filenameTemplateName outputFilename
+
 This example will:
 * read the template file 'test.stg', and use the template 'content' for content generation
 * bind the 2 parameters 'date' and 'quote' to their respective data
 * use the cartesian generation strategy
 * output each generation in the filename given by the template 'outputFilename'
 
-	java -jar patternas-1.0.jar 
-		--templateFilename test.stg
-		--domain date=dates.txt 
-		--domain quote=quotes.txt 
-		--filenameTemplateName outputFilename
 		
 ## Linear output
+
+	java -jar patternas-1.0.jar 
+		--templateFilename test.stg
+		--generationStrategy linear
+		--domain date=dates.txt 
+		--domain quote=quotes.txt
 
 This example will:
 * read the template file 'test.stg', and use the template 'content' for content generation
 * bind the 2 parameters 'date' and 'quote' to their respective data
 * use the linear generation strategy, because data for 'date' is shorter than for 'quote', we loop over it several times
 * output everything to the standard ouput
-
-	java -jar patternas-1.0.jar 
-		--templateFilename test.stg
-		--generationStrategy linear
-		--domain date=dates.txt 
-		--domain quote=quotes.txt 
