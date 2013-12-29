@@ -28,6 +28,6 @@ INTO quote_value
 
 >>
 
-filename(quote, date) ::= <<
-output$quote$-$date$.txt
+outputFilename(quote, date) ::= <<
+output-$quote$-$date$.txt
 >>

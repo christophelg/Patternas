@@ -19,7 +19,7 @@ import com.github.christophelg.patternas.printer.FilePrinter;
 import com.github.christophelg.patternas.printer.Printer;
 import com.github.christophelg.patternas.printer.SysoutPrinter;
 
-public class StartPatternas {
+public class Patternas {
 
   @Parameter(names = "--domain", required = true, validateWith = ParameterDomainValidator.class, converter = ParameterDomainConverter.class)
   private List<ParameterDomain> domains = new ArrayList<ParameterDomain>();
@@ -38,12 +38,13 @@ public class StartPatternas {
   private String outputDirname = ".";
 
   @Parameter(names = "--generationStrategy")
-  private String generationStrategy = "cartesien";
+  private String generationStrategy = "cartesian";
 
   public static void main(String[] args) throws IOException {
-    StartPatternas sp = new StartPatternas();
+    Patternas sp = new Patternas();
 
     JCommander jc = new JCommander(sp);
+    jc.setProgramName("Patternas");
     try {
       jc.parse(args);
       sp.run();
