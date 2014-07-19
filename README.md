@@ -7,6 +7,7 @@ The output is the result of a generation strategy that will multiplex the data s
 
 This tool was created to answer the need to generate SQL scripts, for test data or migration, or configuration scripts.
 For example for an invoicing application, one might want to generate some exhaustive SQL test data from 3 data sets:
+
 1. set of dates
 1. set of customers
 1. set of products 
