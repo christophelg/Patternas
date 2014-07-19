@@ -9,7 +9,7 @@ This tool was created to answer the need to generate SQL scripts, for test data 
 For example for an invoicing application, one might want to generate some exhaustive SQL test data from 3 data sets:
 1 set of dates
 2 set of customers
-3 set of products
+3 set of products 
 
 ## Solution
 
