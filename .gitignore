@@ -4,4 +4,10 @@
 *.jar
 *.war
 *.ear
+
+# Eclipse files
 /target
+.classpath
+.project
+.settings
+dependency-reduced-pom.xml
