@@ -67,7 +67,8 @@ public class Patternas {
     // get the printer
     Printer printer = new SysoutPrinter(templateGroup, contentTemplateName);
     if (filenameTemplateName != null) {
-      printer = new FilePrinter(templateGroup, contentTemplateName, filenameTemplateName, outputDirname);
+      printer =
+          new FilePrinter(templateGroup, contentTemplateName, filenameTemplateName, outputDirname);
     }
 
     Generator generator = new CartesienGenerator(domains, printer);
